@@ -1282,7 +1282,7 @@ ZedCamera::callback_paramChange(std::vector<rclcpp::Parameter> parameters)
     //RCLCPP_INFO(get_logger(), "Parameter change callback");
 
     rcl_interfaces::msg::SetParametersResult result;
-    result.successful = false;
+    result.successful = true;
 
     for (const auto& param : parameters) {
         if (param.get_name() == "general.pub_frame_rate") {
